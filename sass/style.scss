@@ -6,6 +6,9 @@
 
 // Général
 
+img {
+    width: 200px;
+}
 
 * {
     margin: 0;
@@ -40,33 +43,59 @@ header {
         }
         
     }
-    .location {
-        padding: 20px 0;
-        display: flex;
-        justify-content: center;
-        gap: 1.5em;
-        background-color: $color-searchbar;
-        box-shadow: inset 0 3px 5px #00000026 ;
-    }
 }
+
+
+// Block Exploration
 
 .exploration {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.4em;
-    padding: 40px 0;
+    text-align: center;
+    padding-bottom: 40px;
+    .location {
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1.5em;
+        background-color: $color-searchbar;
+        box-shadow: inset 0 3px 5px #00000026 ;
+    }
     h1 {
         font-size: 1.8em;
         font-weight: 700;
+        padding-top: 40px;
     }
 
     p {
         font-size: 1.1em;
         font-weight: 300;
-        padding-bottom: 1em;
     }
     button {
         @include butt;
+    }
+}
+
+
+// Section Fonctionnement
+
+.functions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    background-color: #FFFF;
+    padding: 40px;
+    a {
+        width: fit-content;
+        .function {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5em;
+        }
     }
 }
