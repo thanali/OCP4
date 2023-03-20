@@ -1,0 +1,9 @@
+@mixin butt {
+    background: linear-gradient(340deg, $color-primary 5%, $color-radiant 110%);
+    border: none;
+    padding: 15px 20px;
+    color: #FFFF;
+    border-radius: 25px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.4);
+    width: fit-content;
+}
