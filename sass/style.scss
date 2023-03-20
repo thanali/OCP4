@@ -17,7 +17,7 @@ img {
 }
 
 body {
-    max-width: 768px;
+    // max-width: 768px;
     margin: auto;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -36,7 +36,8 @@ header {
     .logo {
         background-color: #FFFF;
         display: flex;
-        justify-content: center;     
+        justify-content: center;  
+
         img {
             width: 20vh;
             padding: 20px 0;
@@ -55,26 +56,33 @@ header {
     gap: 1.4em;
     text-align: center;
     padding-bottom: 40px;
+
     .location {
         padding: 20px 0;
         width: 100%;
         display: flex;
         justify-content: center;
-        gap: 1.5em;
+        gap: 1.2em;
         background-color: $color-searchbar;
         box-shadow: inset 0 3px 5px #00000026 ;
+
+        i {
+            font-size: $icone-size;
+        }
     }
+
     h1 {
         font-size: 1.8em;
         font-weight: 700;
-        padding-top: 40px;
+        padding: 40px 40px 0;
     }
 
     p {
         font-size: 1.1em;
         font-weight: 300;
+        padding: 0 40px
     }
-    button {
+    .button {
         @include butt;
     }
 }
@@ -88,14 +96,47 @@ header {
     align-items: center;
     gap: 1.5em;
     background-color: #FFFF;
-    padding: 40px;
+    padding: 40px 0;
+
     a {
-        width: fit-content;
+        min-width: 300px;
+
         .function {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex: 0 1 1;
+            position: relative;
             gap: 1.5em;
+            background-color: $color-background;
+            box-shadow: $box-shadow;
+            padding: 25px 50px;
+            border-radius: $radius;
+
+            .number {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: $color-primary
+                ;
+                border-radius: $radius;
+                left: -10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #FFFF;
+                font-size: 0.8em;
+            }
+
+            i {
+                font-size: $icone-size;
+                left: 50px;
+            }
+
+            h2 {
+                font-size: 1em;
+                font-weight: 500;
+            }
         }
     }
 }
