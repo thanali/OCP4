@@ -1,8 +1,12 @@
 @mixin butt {
-    background: linear-gradient(340deg, $color-primary 5%, $color-radiant 110%);
+    @if (lightness($color-primary) > 60%) {
+        color: black;
+    }@else{
+        color: white;
+    }
+    background: linear-gradient(350deg, $color-primary -5%, $color-secondary 115%);
     border: none;
     padding: $pad-block;
-    color: #FFFF;
     border-radius: $radius;
     box-shadow: $box-shadow;
     width: fit-content;

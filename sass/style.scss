@@ -3,7 +3,6 @@
 
 
 
-
 // Général
 
 img {
@@ -30,19 +29,26 @@ a {
     color: black;
 }
 
+i {
+    font-size: $icone-size;
+}
+
 // Header
 
 header {
     .logo {
         background-color: #FFFF;
         display: flex;
-        justify-content: center;  
-
-        img {
-            width: 20vh;
-            padding: 20px 0;
-        }
+        justify-content: center; 
         
+        a {
+            width: fit-content;
+
+            img {
+                width: 20vh;
+                padding: 20px 0;
+            }
+        }
     }
 }
 
@@ -65,14 +71,10 @@ header {
         gap: 1.2em;
         background-color: $color-searchbar;
         box-shadow: inset 0 3px 5px #00000026 ;
-
-        i {
-            font-size: $icone-size;
-        }
     }
 
     h1 {
-        font-size: 1.8em;
+        font-size: $fontsize-title;
         font-weight: 700;
         padding: 40px 40px 0;
     }
@@ -92,51 +94,132 @@ header {
 
 .functions {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5em;
     background-color: #FFFF;
-    padding: 40px 0;
+    padding: 40px;
 
-    a {
-        min-width: 300px;
+    &__links {
+        width: 400px;
+    }
+}
 
-        .function {
+.function {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 1.5em;
+    background-color: $color-background;
+    box-shadow: $box-shadow;
+    padding: 25px 50px;
+    border-radius: $radius * 0.8;
+
+    &__number {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: $color-primary
+        ;
+        border-radius: $radius;
+        left: -10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFFF;
+        font-size: 0.8em;
+    }
+
+    &__info {
+        display: flex;
+        gap: 2em;
+    }
+
+    
+
+    h2 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+}
+
+
+// Section Restaurants
+
+.new {
+    display: inline-block;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    background-color: $color-tertiary;
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px;
+    gap: 1em;
+
+    &__link {
+        width: 100%;
+    }
+}
+
+.rest-cart {
+    position: relative;
+    height: 250px;
+    
+    img {
+        object-fit: cover;
+        width: 100%;
+        border-radius: $radius * 0.8 $radius * 0.8 0 0;
+        height: 70%;
+    }
+
+    &__info {
+        border-radius: 0 0 $radius * 0.8 $radius * 0.8;
+        background-color: #FFFF;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+
+        h3 {
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        p {
+            font-weight: 300;
+        }
+        
+        .fa-heart {
+            position: absolute;
+            right: 20px;
+        }
+    }
+}
+
+// Footer
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: $pad-block;
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        a {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 0 1 1;
-            position: relative;
-            gap: 1.5em;
-            background-color: $color-background;
-            box-shadow: $box-shadow;
-            padding: 25px 50px;
-            border-radius: $radius;
-
-            .number {
-                position: absolute;
-                width: 20px;
-                height: 20px;
-                background-color: $color-primary
-                ;
-                border-radius: $radius;
-                left: -10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: #FFFF;
-                font-size: 0.8em;
-            }
-
-            i {
-                font-size: $icone-size;
-                left: 50px;
-            }
-
-            h2 {
-                font-size: 1em;
-                font-weight: 500;
-            }
+            gap: 1em;
         }
     }
 }
