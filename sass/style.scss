@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./base/base";
 
 
 
@@ -7,21 +8,6 @@
 
 img {
     width: 200px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    // max-width: 768px;
-    margin: auto;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    background-color: $color-background;
-    cursor: default;
 }
 
 a {
@@ -33,6 +19,11 @@ i {
     font-size: $icone-size;
 }
 
+h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
 // Header
 
 header {
@@ -40,14 +31,10 @@ header {
         background-color: #FFFF;
         display: flex;
         justify-content: center; 
-        
-        a {
-            width: fit-content;
+        align-items: center;
 
-            img {
-                width: 20vh;
-                padding: 20px 0;
-            }
+        img {
+            padding: 20px;
         }
     }
 }
@@ -70,7 +57,7 @@ header {
         justify-content: center;
         gap: 1.2em;
         background-color: $color-searchbar;
-        box-shadow: inset 0 3px 5px #00000026 ;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
     }
 
     h1 {
@@ -94,26 +81,30 @@ header {
 
 .functions {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 1.5em;
     background-color: #FFFF;
-    padding: 40px;
+    padding: 40px 20px 40px 25px;
+
+    &__title {
+        align-self: flex-start;
+    }
 
     &__links {
-        width: 400px;
+        width: 350px;
     }
 }
 
 .function {
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     position: relative;
-    gap: 1.5em;
+    gap: 1.4em;
     background-color: $color-background;
     box-shadow: $box-shadow;
-    padding: 25px 50px;
+    padding: 25px 40px;
     border-radius: $radius * 0.8;
 
     &__number {
@@ -131,14 +122,7 @@ header {
         font-size: 0.8em;
     }
 
-    &__info {
-        display: flex;
-        gap: 2em;
-    }
-
-    
-
-    h2 {
+    h3 {
         font-size: 1em;
         font-weight: 500;
     }
@@ -160,8 +144,8 @@ header {
 .restaurants {
     display: flex;
     flex-direction: column;
-    padding: 50px 25px;
-    gap: 1em;
+    padding: 50px 20px;
+    gap: 2em;
 
     &__link {
         width: 100%;
@@ -171,16 +155,17 @@ header {
 .rest-cart {
     position: relative;
     height: 250px;
+    box-shadow: $box-shadow;
     
     img {
         object-fit: cover;
         width: 100%;
-        border-radius: $radius * 0.8 $radius * 0.8 0 0;
+        border-radius: $radius * 0.6 $radius * 0.6 0 0;
         height: 70%;
     }
 
     &__info {
-        border-radius: 0 0 $radius * 0.8 $radius * 0.8;
+        border-radius: 0 0 $radius * 0.6 $radius * 0.6;
         background-color: #FFFF;
         height: 30%;
         display: flex;
@@ -188,7 +173,7 @@ header {
         justify-content: space-between;
         padding: 15px;
 
-        h3 {
+        h4 {
             font-weight: 700;
             font-size: 1.1em;
         }
@@ -210,16 +195,28 @@ header {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    padding: $pad-block;
+    padding: 30px 25px;
+    background-color: #353535;
 
-    &__links {
+    &__logo {
+        filter: invert(100%);
+        width: 120px;
+    }
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    a {
         display: flex;
-        flex-direction: column;
-        gap: 0.5em;
+        gap: 1em;
+        color: #FFFF;
+        width: fit-content;
 
-        a {
-            display: flex;
-            gap: 1em;
+        .fa-utensils {
+            padding: 0 3px;
         }
     }
 }
