@@ -48,7 +48,7 @@ header {
     align-items: center;
     gap: 1.4em;
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 
     .location {
         padding: 20px 0;
@@ -63,7 +63,7 @@ header {
     h1 {
         font-size: $fontsize-title;
         font-weight: 700;
-        padding: 40px 40px 0;
+        padding: 20px 40px 0;
     }
 
     p {
@@ -85,14 +85,14 @@ header {
     align-items: center;
     gap: 1.5em;
     background-color: #FFFF;
-    padding: 40px 20px 40px 25px;
+    padding: 40px 15px 60px;
 
     &__title {
         align-self: flex-start;
     }
 
     &__links {
-        width: 350px;
+        width: 330px;
     }
 }
 
@@ -106,6 +106,7 @@ header {
     box-shadow: $box-shadow;
     padding: 25px 40px;
     border-radius: $radius * 0.8;
+    margin-left: 5px;
 
     &__number {
         position: absolute;
@@ -144,18 +145,27 @@ header {
 .restaurants {
     display: flex;
     flex-direction: column;
-    padding: 50px 20px;
-    gap: 2em;
+    padding: 50px 15px 60px;
+    gap: 1.5em;
 
-    &__link {
-        width: 100%;
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+
+        &__link {
+            width: fit-content;
+        }
     }
 }
 
 .rest-cart {
     position: relative;
     height: 250px;
+    width: 335px;
     box-shadow: $box-shadow;
+    border-radius: $radius * 0.6;
     
     img {
         object-fit: cover;
@@ -195,7 +205,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    padding: 30px 25px;
+    padding: 30px 20px;
     background-color: #353535;
 
     &__logo {
