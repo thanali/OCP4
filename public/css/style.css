@@ -69,13 +69,18 @@ header .logo img {
 }
 .exploration .button {
   color: white;
-  background: linear-gradient(350deg, #9356DC -5%, #FF79DA 115%);
+  background: linear-gradient(350deg, #9356dc -5%, #ff79da 115%);
   border: none;
   padding: 15px 20px;
   border-radius: 25px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   width: fit-content;
   margin: 1em;
+  font-weight: 500;
+}
+.exploration .button:hover {
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(350deg, rgba(147, 86, 220, 0.8) -5%, rgba(255, 121, 218, 0.9) 115%);
 }
 
 .functions {
@@ -105,11 +110,14 @@ header .logo img {
   border-radius: 20px;
   margin-left: 5px;
 }
+.function:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
 .function__number {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #9356DC;
+  background-color: #9356dc;
   border-radius: 25px;
   left: -10px;
   display: flex;
@@ -126,11 +134,12 @@ header .logo img {
 .new {
   display: inline-block;
   position: absolute;
-  right: 25px;
-  top: 25px;
+  right: 15px;
+  top: 15px;
   background-color: #99E2D0;
   padding: 5px 10px;
   font-size: 0.9em;
+  color: #217460;
 }
 
 .restaurants {
@@ -180,7 +189,8 @@ header .logo img {
 }
 .rest-cart__info .fa-heart {
   position: absolute;
-  right: 20px;
+  right: 25px;
+  bottom: 25px;
 }
 
 .footer {

@@ -72,7 +72,7 @@ header {
         padding: 0 40px
     }
     .button {
-        @include butt;
+        @include btn;
     }
 }
 
@@ -108,6 +108,12 @@ header {
     border-radius: $radius * 0.8;
     margin-left: 5px;
 
+
+
+    &:hover {
+        background-color: rgba(147, 86, 220, 0.1);
+    }
+
     &__number {
         position: absolute;
         width: 20px;
@@ -135,11 +141,12 @@ header {
 .new {
     display: inline-block;
     position: absolute;
-    right: 25px;
-    top: 25px;
+    right: 15px;
+    top: 15px;
     background-color: $color-tertiary;
     padding: 5px 10px;
     font-size: 0.9em;
+    color: darken($color: $color-tertiary, $amount: 45%);
 }
 
 .restaurants {
@@ -194,7 +201,8 @@ header {
         
         .fa-heart {
             position: absolute;
-            right: 20px;
+            right: 25px;
+            bottom: 25px;
         }
     }
 }
