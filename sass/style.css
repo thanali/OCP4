@@ -74,6 +74,7 @@ header .logo img {
   padding: 15px 20px;
   border-radius: 25px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: -moz-fit-content;
   width: fit-content;
   margin: 1em;
   font-weight: 500;
@@ -160,6 +161,7 @@ header .logo img {
   gap: 2em;
 }
 .restaurants__links__link {
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 15px;
   background-color: white;
@@ -173,7 +175,8 @@ header .logo img {
   border-radius: 15px;
 }
 .rest-cart img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   border-radius: 15px 15px 0 0;
   height: 75%;
@@ -238,10 +241,9 @@ header .logo img {
   display: flex;
   gap: 1em;
   color: white;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .footer__links a .fa-utensils {
-  padding: 0 4px;
-}
-
-/*# sourceMappingURL=style.css.map */
+  padding: 0 3px;
+}/*# sourceMappingURL=style.css.map */
