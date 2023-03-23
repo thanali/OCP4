@@ -6,13 +6,9 @@
 
 // Général
 
-img {
-    width: 200px;
-}
-
 a {
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 
 i {
@@ -20,7 +16,7 @@ i {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: $fontsize-title;
     font-weight: 700;
 }
 
@@ -28,13 +24,14 @@ h2 {
 
 header {
     .logo {
-        background-color: #FFFF;
+        background-color: #ffffff;
         display: flex;
         justify-content: center; 
         align-items: center;
 
         img {
             padding: 20px;
+            width: 200px;
         }
     }
 }
@@ -82,7 +79,7 @@ header {
 .functions {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    gap: $gap-mobile;
     background-color: #FFFF;
     padding: 40px 15px 60px;
 
@@ -94,7 +91,7 @@ header {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1.5em;
+        gap: $gap-mobile;
 
         &__link {
             width: 330px;
@@ -129,7 +126,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #FFFF;
+        color: #ffffff;
         font-size: 0.8em;
     }
 
@@ -157,7 +154,7 @@ header {
     display: flex;
     flex-direction: column;
     padding: 50px 15px 60px;
-    gap: 1.5em;
+    gap: $gap-mobile;
 
     &__links {
         display: flex;
@@ -184,7 +181,7 @@ header {
         object-fit: cover;
         width: 100%;
         border-radius: $radius * 0.6 $radius * 0.6 0 0;
-        height: 75%;
+        height: 70%;
     }
 
     &__info {
@@ -192,7 +189,7 @@ header {
         display: flex;
         flex-direction: column;
         gap: 0.4em;
-        padding: 4px 15px 0;
+        padding: 10px 15px 0;
 
         h4 {
             font-weight: 700;
@@ -203,16 +200,18 @@ header {
             font-weight: 300;
         }
         
-        .fa-solid {
+        i {
             position: absolute;
             right: 25px;
-            bottom: 20px;
+            bottom: 25px;
             font-size: 1.3em;
-            color: $color-primary;
-            display: block;
+        }
+
+        .fa-solid {
             background: -webkit-linear-gradient(350deg, $color-primary -5%, $color-secondary 115%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            transition: opacity 300ms;
             opacity: 0;
 
             &:hover {
@@ -220,16 +219,6 @@ header {
             }
         }
 
-        .fa-regular {
-            position: absolute;
-            right: 25px;
-            bottom: 20px;
-            font-size: 1.3em;
-
-            &:hover {
-                opacity: 0;
-            }
-        }
     }
 }
 
