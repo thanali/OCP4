@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 30px 20px;
+    background-color: #353535;
+
+    &__logo {
+        filter: invert(100%);
+        width: 120px;
+    }
+
+    @include desktop {
+        flex-direction: row-reverse;
+        gap: 5em;
+        padding-right: 5em;
+    }
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    a {
+        display: flex;
+        gap: 1em;
+        color: #FFFF;
+        width: fit-content;
+
+        .fa-utensils {
+            padding: 0 4px;
+        }
+    }
+
+    @include desktop {
+        flex-direction: row;
+        gap: 4vw;
+        white-space: nowrap;
+    }
+}

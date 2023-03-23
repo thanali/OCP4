@@ -18,3 +18,15 @@
         background: linear-gradient(350deg, rgba(147, 86, 220, 0.8) -5%, rgba(255, 121, 218, 0.9) 115%);
     }
 }
+
+@mixin tablette {
+    @media screen and (min-width: map-get($breakpoints, tablette)) {
+        @content
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content
+    }
+}

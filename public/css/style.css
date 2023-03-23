@@ -8,7 +8,6 @@ body {
   margin: auto;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  background-color: #F6F6F6;
   cursor: default;
 }
 
@@ -19,11 +18,6 @@ a {
 
 i {
   font-size: 1.2em;
-}
-
-h2 {
-  font-size: 1.5em;
-  font-weight: 700;
 }
 
 header .logo {
@@ -37,10 +31,57 @@ header .logo img {
   width: 200px;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 30px 20px;
+  background-color: #353535;
+}
+.footer__logo {
+  filter: invert(100%);
+  width: 120px;
+}
+@media screen and (min-width: 992px) {
+  .footer {
+    flex-direction: row-reverse;
+    gap: 5em;
+    padding-right: 5em;
+  }
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.footer__links a {
+  display: flex;
+  gap: 1em;
+  color: white;
+  width: fit-content;
+}
+.footer__links a .fa-utensils {
+  padding: 0 4px;
+}
+@media screen and (min-width: 992px) {
+  .footer__links {
+    flex-direction: row;
+    gap: 4vw;
+    white-space: nowrap;
+  }
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
 .exploration {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #F6F6F6;
   gap: 1.4em;
   text-align: center;
   padding-bottom: 30px;
@@ -83,34 +124,46 @@ header .logo img {
 .functions {
   display: flex;
   flex-direction: column;
+  padding: 40px 5vw 60px;
+  margin: auto;
   gap: 1.5em;
-  background-color: white;
-  padding: 40px 15px 60px;
 }
 .functions__title {
   align-self: flex-start;
 }
+@media screen and (min-width: 992px) {
+  .functions__title {
+    padding-left: 10vw;
+  }
+}
 .functions__links {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   gap: 1.5em;
+  padding-left: 5px;
 }
-.functions__links__link {
-  width: 330px;
+@media screen and (min-width: 745px) {
+  .functions__links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 745px) {
+  .functions__link {
+    width: 320px;
+  }
 }
 
 .function {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   position: relative;
   gap: 1.4em;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 25px 40px;
+  padding: 25px 35px;
   border-radius: 20px;
-  margin-left: 5px;
 }
 .function:hover {
   background-color: rgba(147, 86, 220, 0.1);
@@ -146,26 +199,47 @@ header .logo img {
 
 .restaurants {
   display: flex;
+  padding: 50px 5vw 60px;
+  background-color: #F6F6F6;
   flex-direction: column;
-  padding: 50px 15px 60px;
   gap: 1.5em;
+}
+.restaurants__title {
+  align-self: flex-start;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__title {
+    padding-left: 10vw;
+  }
 }
 .restaurants__links {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   gap: 2em;
 }
+@media screen and (min-width: 745px) {
+  .restaurants__links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+  }
+}
 .restaurants__links__link {
-  width: fit-content;
+  width: 100%;
   border-radius: 15px;
   background-color: white;
+}
+@media screen and (min-width: 745px) {
+  .restaurants__links__link {
+    width: 320px;
+  }
 }
 
 .rest-cart {
   position: relative;
   height: 250px;
-  width: 335px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
@@ -193,10 +267,11 @@ header .logo img {
   position: absolute;
   right: 25px;
   bottom: 25px;
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 .rest-cart__info .fa-solid {
   background: -webkit-linear-gradient(350deg, #9356dc -5%, #ff79da 115%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: opacity 300ms;
@@ -204,33 +279,6 @@ header .logo img {
 }
 .rest-cart__info .fa-solid:hover {
   opacity: 1;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  padding: 30px 20px;
-  background-color: #353535;
-}
-.footer__logo {
-  filter: invert(100%);
-  width: 120px;
-}
-
-.footer__links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-.footer__links a {
-  display: flex;
-  gap: 1em;
-  color: white;
-  width: fit-content;
-}
-.footer__links a .fa-utensils {
-  padding: 0 4px;
 }
 
 /*# sourceMappingURL=style.css.map */

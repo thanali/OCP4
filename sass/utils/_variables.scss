@@ -8,3 +8,9 @@ $radius: 25px;
 $icone-size: 1.2em;
 $fontsize-title: 1.5em;
 $gap-mobile: 1.5em;
+$gap-tablette: 2em;
+
+$breakpoints: (
+    tablette: 745px,
+    desktop: 992px
+)

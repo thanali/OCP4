@@ -1,0 +1,224 @@
+
+// Général
+
+h2 {
+    font-size: $fontsize-title;
+    font-weight: 700;
+}
+
+
+// Block Exploration
+
+.exploration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-background;
+    gap: 1.4em;
+    text-align: center;
+    padding-bottom: 30px;
+
+    .location {
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1.2em;
+        background-color: $color-searchbar;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+        font-size: $fontsize-title;
+        font-weight: 700;
+        padding: 20px 40px 0;
+    }
+
+    p {
+        font-size: 1.1em;
+        font-weight: 300;
+        padding: 0 40px
+    }
+    .button {
+        @include btn;
+    }
+}
+
+
+// Section Fonctionnement
+
+.functions {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 5vw 60px;
+    margin: auto;
+    gap: $gap-mobile;
+
+    &__title {
+        align-self: flex-start;
+
+        @include desktop {
+            padding-left: 10vw;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-mobile;
+        padding-left: 5px;
+
+        @include tablette {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__link {
+
+        @include tablette {
+            width: 320px;
+        }
+    } 
+}
+
+.function {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 1.4em;
+    background-color: $color-background;
+    box-shadow: $box-shadow;
+    padding: 25px 35px;
+    border-radius: $radius * 0.8;
+
+    &:hover {
+        background-color: rgba(147, 86, 220, 0.1);
+    }
+
+    &__number {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: $color-primary;
+        border-radius: $radius;
+        left: -10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        font-size: 0.8em;
+    }
+
+    h3 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+}
+
+
+// Section Restaurants
+
+.new {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: $color-tertiary;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    color: darken($color: $color-tertiary, $amount: 45%);
+}
+
+.restaurants {
+    display: flex;
+    padding: 50px 5vw 60px;
+    background-color: $color-background;
+    flex-direction: column;
+    gap: $gap-mobile;
+
+    &__title {
+        align-self: flex-start;
+
+        @include desktop {
+            padding-left: 10vw;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+
+        @include tablette {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: $gap-tablette;
+        }
+
+        &__link {
+            width: 100%;
+            border-radius: $radius * 0.6;
+            background-color: #FFFF;
+
+            @include tablette {
+                width: 320px;
+            }
+        }
+    }
+}
+
+.rest-cart {
+    position: relative;
+    height: 250px;
+    box-shadow: $box-shadow;
+    border-radius: $radius * 0.6;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        border-radius: $radius * 0.6 $radius * 0.6 0 0;
+        height: 70%;
+    }
+
+    &__info {
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+        padding: 10px 15px 0;
+
+        h4 {
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        p {
+            font-weight: 300;
+        }
+        
+        i {
+            position: absolute;
+            right: 25px;
+            bottom: 25px;
+            font-size: 1.5em;
+        }
+
+        .fa-solid {
+            background: -webkit-linear-gradient(350deg, $color-primary -5%, $color-secondary 115%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: opacity 300ms;
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+    }
+}
