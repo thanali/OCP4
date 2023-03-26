@@ -20,15 +20,22 @@ i {
   font-size: 1.2em;
 }
 
+header {
+  position: relative;
+}
 header .logo {
-  background-color: #ffffff;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 header .logo img {
   padding: 20px;
   width: 200px;
+}
+header .icon-return {
+  font-size: 1.2em;
+  position: absolute;
+  top: 22px;
+  left: 22px;
 }
 
 .footer {
@@ -277,8 +284,8 @@ h2 {
 
 .icon-heart {
   position: absolute;
-  right: 10%;
-  bottom: 30%;
+  right: 7%;
+  bottom: 17px;
 }
 .icon-heart::before {
   content: "\f004";
@@ -301,6 +308,91 @@ h2 {
   font-size: 1.5em;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: thin;
+}
+
+.img-cover {
+  object-fit: cover;
+  width: 100vw;
+  height: 60vw;
+  max-height: 400px;
+}
+
+main {
+  padding: 30px 15px;
+  background-color: #F6F6F6;
+  border-radius: 50px 50px 0 0;
+  position: relative;
+  margin-top: -60px;
+}
+
+.title {
+  display: flex;
+}
+.title h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+.title .icon-heart {
+  bottom: initial;
+  right: 12%;
+}
+
+.courses {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+.courses__title h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+.courses__title hr {
+  height: 3px;
+  width: 40px;
+  border: 0;
+  background: #99E2D0;
+}
+
+.courses__dish {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1em;
+  background-color: #ffffff;
+  padding: 12px 20px 12px 10px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.courses__dish__info h3 {
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.courses__dish__info p {
+  font-weight: 300;
+}
+.courses__dish--validation {
+  display: none;
+}
+
+.button {
+  color: white;
+  background: linear-gradient(350deg, #9356dc -5%, #ff79da 115%);
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  margin: 1em;
+  font-weight: 500;
+  display: block;
+  margin: auto;
+}
+.button:hover {
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(350deg, rgba(147, 86, 220, 0.8) -5%, rgba(255, 121, 218, 0.9) 115%);
 }
 
 /*# sourceMappingURL=style.css.map */

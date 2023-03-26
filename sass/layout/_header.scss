@@ -1,13 +1,20 @@
 header {
+    position: relative;
+    
     .logo {
-        background-color: #ffffff;
         display: flex;
-        justify-content: center; 
-        align-items: center;
+        justify-content: center;
 
         img {
             padding: 20px;
             width: 200px;
         }
+    }
+
+    .icon-return {
+        font-size: $icone-size;
+        position: absolute;
+        top: 22px;
+        left: 22px;
     }
 }
