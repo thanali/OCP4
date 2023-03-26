@@ -4,7 +4,7 @@
     }@else{
         color: white;
     }
-    background: linear-gradient(350deg, $color-primary -5%, $color-secondary 115%);
+    background: linear-gradient($gradient);
     border: none;
     padding: 15px 20px;
     border-radius: $radius;
