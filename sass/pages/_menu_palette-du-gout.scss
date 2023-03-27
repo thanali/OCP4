@@ -1,4 +1,13 @@
 
+@keyframes check-effect {
+    0%, 100%{
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.5);
+    }
+}
 
 
 // Image restaurant
@@ -36,7 +45,7 @@ main {
 }
 
 .courses {
-    padding: 30px 0;
+    padding: 25px 0;
     display: flex;
     flex-direction: column;
     gap: 0.8em;
@@ -53,38 +62,81 @@ main {
             width: 40px;
             border: 0;
             background: $color-tertiary;
+            margin-top: 0.5em;
         }
     }
 }
 
-.courses__dish {
+.coursesItem {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 1em;
     background-color: #ffffff;
-    padding: 12px 20px 12px 10px;
     border-radius: $radius * 0.6;
     box-shadow: $box-shadow;
+    white-space: nowrap;
+    overflow: hidden;
 
     &__info {
-        h3 {
-            font-weight: 500;
-            padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        flex: 1;
+        gap: 0.5em;
+        overflow: hidden;
+
+        &__text {
+            overflow: hidden;
+
+            h3 {
+                font-weight: 500;
+                font-size: 1em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        
+            p {
+                font-weight: 300;
+                font-size: 1em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
-    
-        p {
-            font-weight: 300;
+
+        &__price {
+            align-self: flex-end;
+            font-weight: 700;
         }
     }
 
-    &--validation {
-        display: none;
+    &:hover .coursesItem--validation {
+        width: 25%;
+    }
+
+    &:hover .fa-circle-check {
+        animation: check-effect 700ms 200ms;
     }
 }
 
+
+.coursesItem--validation {
+    background-color: $color-tertiary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 0;
+    transition: 300ms ease-in-out;
+
+    .fa-circle-check {
+        color: #ffffff;
+        font-size: 1.3em;
+    }
+}
+
+
 .button {
-    @include btn;
-    display: block;
-    margin: auto;
+    a {
+        @include btn;
+        display: block;
+        margin: auto;
+    }
 }

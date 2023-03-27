@@ -310,6 +310,14 @@ h2 {
   -webkit-text-stroke-width: thin;
 }
 
+@keyframes check-effect {
+  0%, 100% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+}
 .img-cover {
   object-fit: cover;
   width: 100vw;
@@ -339,7 +347,7 @@ main {
 }
 
 .courses {
-  padding: 30px 0;
+  padding: 25px 0;
   display: flex;
   flex-direction: column;
   gap: 0.8em;
@@ -354,30 +362,66 @@ main {
   width: 40px;
   border: 0;
   background: #99E2D0;
+  margin-top: 0.5em;
 }
 
-.courses__dish {
+.coursesItem {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-size: 1em;
   background-color: #ffffff;
-  padding: 12px 20px 12px 10px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  overflow: hidden;
 }
-.courses__dish__info h3 {
+.coursesItem__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  flex: 1;
+  gap: 0.5em;
+  overflow: hidden;
+}
+.coursesItem__info__text {
+  overflow: hidden;
+}
+.coursesItem__info__text h3 {
   font-weight: 500;
-  padding-bottom: 5px;
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.courses__dish__info p {
+.coursesItem__info__text p {
   font-weight: 300;
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.courses__dish--validation {
-  display: none;
+.coursesItem__info__price {
+  align-self: flex-end;
+  font-weight: 700;
+}
+.coursesItem:hover .coursesItem--validation {
+  width: 25%;
+}
+.coursesItem:hover .fa-circle-check {
+  animation: check-effect 700ms 200ms;
 }
 
-.button {
+.coursesItem--validation {
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 0;
+  transition: 300ms ease-in-out;
+}
+.coursesItem--validation .fa-circle-check {
+  color: #ffffff;
+  font-size: 1.3em;
+}
+
+.button a {
   color: white;
   background: linear-gradient(350deg, #9356dc -5%, #ff79da 115%);
   border: none;
@@ -390,7 +434,7 @@ main {
   display: block;
   margin: auto;
 }
-.button:hover {
+.button a:hover {
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
   background: linear-gradient(350deg, rgba(147, 86, 220, 0.8) -5%, rgba(255, 121, 218, 0.9) 115%);
 }
