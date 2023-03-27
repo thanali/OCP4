@@ -79,6 +79,35 @@ header .icon-return {
   }
 }
 
+@keyframes btt {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes ltr {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes check-hover {
+  0%, 100% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+}
 h2 {
   font-size: 1.5em;
   font-weight: 700;
@@ -113,6 +142,9 @@ h2 {
   padding: 0 40px;
 }
 .exploration .button {
+  padding: 0;
+}
+.exploration .button a {
   color: white;
   background: linear-gradient(350deg, #9356dc -5%, #ff79da 115%);
   border: none;
@@ -123,7 +155,7 @@ h2 {
   margin: 1em;
   font-weight: 500;
 }
-.exploration .button:hover {
+.exploration .button a:hover {
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
   background: linear-gradient(350deg, rgba(147, 86, 220, 0.8) -5%, rgba(255, 121, 218, 0.9) 115%);
 }
@@ -310,22 +342,6 @@ h2 {
   -webkit-text-stroke-width: thin;
 }
 
-@keyframes ltr {
-  0% {
-    transform: translateX(-110%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes check-hover {
-  0%, 100% {
-    transform: scale(1);
-  }
-  30% {
-    transform: scale(1.3);
-  }
-}
 .img-cover {
   object-fit: cover;
   width: 100vw;
@@ -333,25 +349,34 @@ h2 {
   max-height: 400px;
 }
 
-main {
+.menu-main {
   padding: 30px 15px;
   background-color: #F6F6F6;
   border-radius: 50px 50px 0 0;
   position: relative;
   margin-top: -60px;
 }
+@media screen and (min-width: 745px) {
+  .menu-main {
+    width: 80%;
+    margin: -60px auto 0;
+    padding: 30px 10%;
+  }
+}
 
 .title {
   display: flex;
+  gap: 2em;
 }
 .title h1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.5em;
   letter-spacing: 1px;
 }
-.title .icon-heart {
-  bottom: initial;
-  right: 12%;
+@media screen and (min-width: 745px) {
+  .title {
+    justify-content: center;
+  }
 }
 
 .courses {
@@ -371,6 +396,8 @@ main {
   border: 0;
   background: #99E2D0;
   margin-top: 0.5em;
+  transform-origin: left;
+  animation: ltr 1000ms 150ms backwards ease-out;
 }
 
 .coursesItem {
@@ -380,7 +407,7 @@ main {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   white-space: nowrap;
   overflow: hidden;
-  animation: ltr 1000ms 400ms backwards ease-out;
+  animation: btt 1000ms 200ms backwards cubic-bezier(0.37, 0.6, 0.7, 1.16);
 }
 .coursesItem--1 {
   animation-delay: 111.1111111111ms;

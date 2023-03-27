@@ -39,10 +39,15 @@ h2 {
     p {
         font-size: 1.1em;
         font-weight: 300;
-        padding: 0 40px
+        padding: 0 40px;
     }
+    
     .button {
-        @include btn;
+        padding: 0;
+
+        a {
+            @include btn;
+        }
     }
 }
 
@@ -144,7 +149,7 @@ h2 {
     background-color: $color-background;
     gap: $gap-mobile;
 
-    @include tablette {
+    @include tablet {
         padding: 50px 0 60px;
 
         h2 {
@@ -159,7 +164,7 @@ h2 {
         justify-content: center;
         gap: 2em;
 
-        @include tablette {
+        @include tablet {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -173,7 +178,7 @@ h2 {
             border-radius: $radius * 0.6;
             background-color: #FFFF;
 
-            @include tablette {
+            @include tablet {
                 width: 48%;
             }
         }
