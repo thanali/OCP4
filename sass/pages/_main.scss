@@ -61,7 +61,7 @@ h2 {
     margin: auto;
     gap: $gap-mobile;
 
-    @include desktop {
+    @include tablet {
         margin: auto;
         max-width: 80%;
         padding: 40px 0 60px;
@@ -218,9 +218,9 @@ h2 {
     }
 }
 
-.icon-heart {
-    @include icon-heart;
+.favorite {
     position: absolute;
-    right: 7%;
-    bottom: 17px;
+    right: 8%;
+    bottom: 20%;
+    @include favorite;
 }

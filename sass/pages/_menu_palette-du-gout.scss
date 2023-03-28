@@ -26,7 +26,8 @@
 
 .title {
     display: flex;
-    gap: 2em;
+    justify-content: space-around;
+    gap: 1em;
 
     h1 {
         font-family: 'Shrikhand', sans-serif;
@@ -34,8 +35,13 @@
         letter-spacing: 1px;
     }
 
+    .favorite-menu {
+        @include favorite;
+    }
+
     @include tablet {
         justify-content: center;
+        gap: 2em;
     }
 }
 
@@ -73,12 +79,6 @@
     overflow: hidden;
     animation: btt $anim-dur 200ms backwards cubic-bezier(.37,.6,.7,1.16);
 
-    @for $i from 1 through $article-courses {
-        &--#{$i} {
-            animation-delay: $anim-delay * $i;
-        }
-    }
-
     &__info {
         display: flex;
         justify-content: space-between;
@@ -114,6 +114,12 @@
         }
     }
 
+    @for $i from 1 through $article-courses {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+        }
+    }
+
     &:hover .coursesItem--validation {
         width: 60px;
     }
@@ -132,11 +138,7 @@
     cursor: pointer;
     width: 0;
     transition: 300ms ease-in-out;
-
-    &:active {
-        width: 100%;
-    }
-
+    
     .fa-circle-check {
         color: #ffffff;
         font-size: 1.3em;

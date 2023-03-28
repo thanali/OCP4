@@ -19,35 +19,33 @@
     }
 }
 
-@mixin icon-heart {
-        
-    &::before {
-    content: '\f004';
-    font-family: fontAwesome;
-    position: absolute;
-    font-size: 1.5em;
-    height: 0;
-    text-align: center;
-    background: -webkit-linear-gradient($gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: 300ms;
-}
-
-    &:hover::before {
-        height: 100%;
-        overflow: hidden;
-    }
-
-    .fa-heart {
+@mixin favorite {
+    
+    .icon-toggle {
+        position: relative;
         font-size: 1.5em;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: thin;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    input{ 
+        display: none;
+    }
+    
+    input:checked + .icon-toggle i::after {
+        content: '\f004';
+        position: absolute;
+        left: 0;
+        background: -webkit-linear-gradient($gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: initial;
+        animation: fill 600ms ease-in-out 100ms backwards;
     }
 }
-
-
 
 
 @mixin tablet {

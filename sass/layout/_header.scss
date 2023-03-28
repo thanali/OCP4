@@ -16,5 +16,12 @@ header {
         position: absolute;
         top: 22px;
         left: 22px;
+        cursor: pointer;
+
+        &:hover{
+            content: '\f060';
+            animation: shake 700ms ease-in 100ms infinite;
+        }
+        
     }
 }
