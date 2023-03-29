@@ -94,13 +94,13 @@
     }
 
     20% {
-        bottom: 0;
-        left: 1%;
-        transform: scale(2) rotateX(60deg);
+        left: 0;
+        bottom: -2vw;
+        transform: rotateX(60deg);
     }
 
     30% {
-        transform: scale(2) rotateX(0);
+        transform: rotateX(0);
     }
 
     50% {
@@ -109,14 +109,14 @@
     }
 
     65% {
-        transform: scale(2) rotateX(0);
+        transform: rotateX(0);
     }
 
     80% {
         opacity: 1;
-        left: 78%;
-        bottom: 0;
-        transform: scale(2) rotateX(60deg);
+        left: 75%;
+        bottom: -2vw;
+        transform: rotateX(60deg);
     }
 
     100% {

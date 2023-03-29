@@ -1,5 +1,7 @@
 
 .loader {
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 9vw;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -13,39 +15,40 @@
 }
 
 .anim {
-    width: 400px;
-    height: 230px;
-    margin-bottom: 100px;
+    width: 50vw;
+    height: 23vh;
+    margin-bottom: 5vh;
     position: relative;
 
     .ball,
     .logo {
         position: absolute;
-        transform: scale(2);
     }
 
     .logo {
-        fill: $color-primary;
+        display: flex;
+        gap: 6vw;
+        left: 6vw;
+        width: 38vw;
+        color: $color-primary;
         position: absolute;
-        transform-origin: right;
-        bottom: 8px;
-        left: 50%;
+        bottom: 0;
         z-index: 1;
 
     }
 
     .ball {
-        fill: $color-primary;
-        animation: bounce 1700ms 300ms 1 both;
+        color: $color-primary;
+        animation: bounce 1500ms 300ms 1 both;
         z-index: 2;
     }
 
     .ground {
         background-color: #2c0454;
-        height: 6px;
-        width: 400px;
+        height: 0.5vw;
+        width: 48vw;
         position: absolute;
-        bottom: 0;
+        bottom: 3vw;
         z-index: 0;
         border-radius: 50%;
         filter: blur(7px);
