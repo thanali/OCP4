@@ -47,7 +47,6 @@ h2 {
 
         a {
             @include btn;
-            cursor: pointer;
         }
     }
 }
@@ -81,7 +80,6 @@ h2 {
     }
 
     &__link {
-        cursor: pointer;
     
         @include desktop {
             width: 31%;
