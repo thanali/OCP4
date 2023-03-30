@@ -1,10 +1,12 @@
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./base/base";
-@import "./layout/header";
-@import "./layout/footer";
 @import "./utils/animations";
 
+
+@import "./base/base";
 @import "./layout/loader";
-@import "./pages/main";
+@import "./layout/header";
+@import "./layout/footer";
+
 @import "./pages/menu_palette-du-gout";
+@import "./pages/main";
