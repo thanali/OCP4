@@ -47,6 +47,7 @@ h2 {
 
         a {
             @include btn;
+            cursor: pointer;
         }
     }
 }
@@ -80,6 +81,7 @@ h2 {
     }
 
     &__link {
+        cursor: pointer;
     
         @include desktop {
             width: 31%;
@@ -172,18 +174,9 @@ h2 {
             margin: auto;
             gap: $gap-mobile;
         }
-
-        &__link {
-            width: 100%;
-            border-radius: $radius * 0.6;
-            background-color: #FFFF;
-
-            @include tablet {
-                width: 48%;
-            }
-        }
     }
 }
+
 
 .rest-cart {
     position: relative;
@@ -215,6 +208,10 @@ h2 {
         p {
             font-weight: 300;
         }
+    }
+
+    @include tablet {
+        width: 45%;
     }
 }
 

@@ -1,3 +1,6 @@
+
+// Animation Bottom to Top pour l'apparition des plats dans la page des menus
+
 @keyframes btt {
     0% {
         opacity: 0;
@@ -14,6 +17,7 @@
     }
 }
 
+// Animation Left to Right pour l'apparition du soulignement dans les pages menus
 
 @keyframes ltr {
     0% {
@@ -25,6 +29,7 @@
     }
 }
 
+// Apparition au survol pour le choix des plats
 
 @keyframes check-hover {
     0%, 100%{
@@ -36,6 +41,7 @@
     }
 }
 
+// Remplissage du coeur en favori
 
 @keyframes fill {
     0% {
@@ -60,6 +66,8 @@
     }
 }
 
+// Secousse du coeur favori une fois rempli
+
 @keyframes shake {
     0%, 100% {
         transform: translateX(0);
@@ -70,6 +78,8 @@
     }
 }
 
+// Disparition du loader
+
 @keyframes fadeout {
     0%, 90% {
         opacity: 100%;
@@ -77,16 +87,17 @@
 
     100% {
         opacity: 0%;
+        visibility: hidden;
     }
 }
 
+// Lettre du loader qui rebondie
 
 @keyframes bounce {
     0% {
-        left: -200px;
+        left: -20vw;
         opacity: 0;
         bottom: 80%;
-        animation-timing-function: cubic-bezier(.57,0,.47,.71);
     }
 
     15% {
@@ -95,8 +106,9 @@
 
     20% {
         left: 0;
-        bottom: -2vw;
+        bottom: 0vw;
         transform: rotateX(60deg);
+        animation-timing-function: cubic-bezier(.35,.66,.7,.99);
     }
 
     30% {
@@ -115,14 +127,26 @@
     80% {
         opacity: 1;
         left: 75%;
-        bottom: -2vw;
+        bottom: 0vw;
         transform: rotateX(60deg);
+        animation-timing-function: cubic-bezier(.35,.66,.7,.99);
     }
 
     100% {
-        left: 550px;
+        left: 60vw;
         opacity: 0;
         bottom: 80%;
-        animation-timing-function: cubic-bezier(.57,0,.47,.71);
+    }
+}
+
+// Lettres du loader qui s'écrasent
+
+@keyframes squeeze {
+    0%, 100% {
+        transform: rotateX(0);
+        animation-timing-function: ease-out;
+    }
+    25% {
+        transform: rotateX(55deg) translateY(-10%);
     }
 }

@@ -12,7 +12,7 @@ $gap-mobile: 1.5em;
 $gap-tablette: 2em;
 $article-courses: 9;
 $anim-dur: 1000ms;
-$anim-delay: $anim-dur / $article-courses;
+$anim-delay: calc($anim-dur / $article-courses);
 
 $breakpoints: (
     tablet: 745px,
