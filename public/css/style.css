@@ -458,7 +458,7 @@ h2 {
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 1.2em;
+  gap: 0.5em;
   background-color: #EAEAEA;
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
@@ -466,7 +466,7 @@ h2 {
   border: none;
   background-color: #EAEAEA;
   font-size: 1em;
-  width: 10vw;
+  text-align: center;
   cursor: auto;
 }
 .exploration .location input::placeholder {
@@ -606,7 +606,7 @@ h2 {
   justify-content: center;
   gap: 2em;
 }
-@media screen and (min-width: 745px) {
+@media screen and (min-width: 992px) {
   .restaurants__links {
     flex-direction: row;
     justify-content: space-between;
@@ -646,6 +646,12 @@ h2 {
   font-weight: 300;
 }
 @media screen and (min-width: 745px) {
+  .rest-cart {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 992px) {
   .rest-cart {
     width: 45%;
   }
