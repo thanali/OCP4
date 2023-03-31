@@ -20,7 +20,7 @@
     position: relative;
 
     .ball,
-    .logo {
+    .anim-logo {
         position: absolute;
     }
 
@@ -34,7 +34,7 @@
         z-index: 5;
     }
 
-    .logo {
+    .anim-logo {
         display: flex;
         width: 50vw;
         color: $color-primary;

@@ -1,23 +1,32 @@
+
+// Bouton CTA
+
 @mixin btn {
     @if (lightness($color-primary) > 60%) {
         color: black;
     }@else{
         color: white;
     }
+    display: flex;
+    justify-content: center;
     background: linear-gradient($gradient);
     border: none;
-    padding: 15px 20px;
+    min-width: 185px;
+    padding: 15px 22px;
     border-radius: $radius;
     box-shadow: $box-shadow;
-    width: fit-content;
     margin: 1em;
     font-weight: 500;
+    font-size: 1em;
 
     &:hover {
         box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
         background: linear-gradient(350deg, rgba(147, 86, 220, 0.8) -5%, rgba(255, 121, 218, 0.9) 115%);
     }
 }
+
+
+// Icone favori coeur
 
 @mixin favorite {
     
@@ -47,6 +56,8 @@
     }
 }
 
+
+// Media queries
 
 @mixin tablet {
     @media screen and (min-width: map-get($breakpoints, tablet)) {

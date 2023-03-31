@@ -28,6 +28,19 @@ h2 {
         gap: 1.2em;
         background-color: $color-searchbar;
         box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+        input {
+            border: none;
+            background-color: $color-searchbar;
+            font-size: 1em;
+            width: 10vw;
+            cursor: auto;
+
+            &::placeholder {
+                opacity: 1;
+                color: #000000;
+            }
+        }
     }
 
     h1 {
@@ -43,11 +56,7 @@ h2 {
     }
     
     .button {
-        padding: 0;
-
-        a {
-            @include btn;
-        }
+        @include btn;
     }
 }
 

@@ -153,7 +153,7 @@ i {
   position: relative;
 }
 .anim .ball,
-.anim .logo {
+.anim .anim-logo {
   position: absolute;
 }
 .anim .ball {
@@ -165,7 +165,7 @@ i {
   animation: bounce 1500ms 300ms both;
   z-index: 5;
 }
-.anim .logo {
+.anim .anim-logo {
   display: flex;
   width: 50vw;
   color: #9356dc;
@@ -369,30 +369,33 @@ header .icon-return:hover {
   font-weight: 700;
 }
 .coursesItem--1 {
-  animation-delay: 111.1111111111ms;
+  animation-delay: 100ms;
 }
 .coursesItem--2 {
-  animation-delay: 222.2222222222ms;
+  animation-delay: 200ms;
 }
 .coursesItem--3 {
-  animation-delay: 333.3333333333ms;
+  animation-delay: 300ms;
 }
 .coursesItem--4 {
-  animation-delay: 444.4444444444ms;
+  animation-delay: 400ms;
 }
 .coursesItem--5 {
-  animation-delay: 555.5555555556ms;
+  animation-delay: 500ms;
 }
 .coursesItem--6 {
-  animation-delay: 666.6666666667ms;
+  animation-delay: 600ms;
 }
 .coursesItem--7 {
-  animation-delay: 777.7777777778ms;
+  animation-delay: 700ms;
 }
 .coursesItem--8 {
-  animation-delay: 888.8888888889ms;
+  animation-delay: 800ms;
 }
 .coursesItem--9 {
+  animation-delay: 900ms;
+}
+.coursesItem--10 {
   animation-delay: 1000ms;
 }
 .coursesItem:hover .coursesItem--validation {
@@ -417,22 +420,21 @@ header .icon-return:hover {
 }
 
 .button {
-  padding: 20px 0;
-}
-.button a {
   color: white;
+  display: flex;
+  justify-content: center;
   background: linear-gradient(350deg, #9356dc -5%, #ff79da 115%);
   border: none;
-  padding: 15px 20px;
+  min-width: 185px;
+  padding: 15px 22px;
   border-radius: 25px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  width: fit-content;
   margin: 1em;
   font-weight: 500;
-  display: block;
-  margin: auto;
+  font-size: 1em;
+  margin: 25px auto;
 }
-.button a:hover {
+.button:hover {
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
   background: linear-gradient(350deg, rgba(147, 86, 220, 0.8) -5%, rgba(255, 121, 218, 0.9) 115%);
 }
@@ -460,6 +462,17 @@ h2 {
   background-color: #EAEAEA;
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
+.exploration .location input {
+  border: none;
+  background-color: #EAEAEA;
+  font-size: 1em;
+  width: 10vw;
+  cursor: auto;
+}
+.exploration .location input::placeholder {
+  opacity: 1;
+  color: #000000;
+}
 .exploration h1 {
   font-size: 1.5em;
   font-weight: 700;
@@ -471,20 +484,20 @@ h2 {
   padding: 0 40px;
 }
 .exploration .button {
-  padding: 0;
-}
-.exploration .button a {
   color: white;
+  display: flex;
+  justify-content: center;
   background: linear-gradient(350deg, #9356dc -5%, #ff79da 115%);
   border: none;
-  padding: 15px 20px;
+  min-width: 185px;
+  padding: 15px 22px;
   border-radius: 25px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  width: fit-content;
   margin: 1em;
   font-weight: 500;
+  font-size: 1em;
 }
-.exploration .button a:hover {
+.exploration .button:hover {
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
   background: linear-gradient(350deg, rgba(147, 86, 220, 0.8) -5%, rgba(255, 121, 218, 0.9) 115%);
 }

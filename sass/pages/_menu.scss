@@ -147,11 +147,7 @@
 
 
 .button {
-    padding: 20px 0;
-
-    a {
-        @include btn;
-        display: block;
-        margin: auto;
-    }
+    @include btn;
+    margin: 25px auto;
 }
+
