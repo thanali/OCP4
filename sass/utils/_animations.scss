@@ -106,7 +106,7 @@
 
     20% {
         left: 0;
-        bottom: 0vw;
+        bottom: 2.5vw;
         transform: rotateX(60deg);
         animation-timing-function: cubic-bezier(.35,.66,.7,.99);
     }
@@ -127,7 +127,7 @@
     80% {
         opacity: 1;
         left: 75%;
-        bottom: 0vw;
+        bottom: 2.5vw;
         transform: rotateX(60deg);
         animation-timing-function: cubic-bezier(.35,.66,.7,.99);
     }

@@ -24,30 +24,34 @@
         position: absolute;
     }
 
+    .ball {
+        width: 4.5vw;
+        height: 4.5vw;
+        background-color: $color-primary;
+        border-radius: 50%;
+        color: $color-primary;
+        animation: bounce 1500ms 300ms both;
+        z-index: 5;
+    }
+
     .logo {
         display: flex;
         width: 50vw;
         color: $color-primary;
-        text-shadow: -0.3vw 0.6vw 0.1vw $color-background;
+        filter: drop-shadow(-0.4vw 0.4vw 0.1vw #F6F6F6);
         bottom: 0;
         z-index: 1;
     }
 
-    .o-first {
+    .letter1 {
         transform-origin: bottom;
         animation: squeeze 500ms ease-in-out 450ms backwards;
         z-index: 2;
     }
 
-    .o-last {
+    .letter7 {
         transform-origin: bottom;
         animation: squeeze 500ms ease-in-out 1350ms backwards;
         z-index: 2;
-    }
-
-    .ball {
-        color: $color-primary;
-        animation: bounce 1500ms 300ms both;
-        z-index: 5;
     }
 }
