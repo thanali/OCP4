@@ -6,14 +6,26 @@
     background-color: #353535;
 
     &__logo {
-        filter: invert(100%);
-        width: 120px;
+        color: #FFFF;
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 1.2em;
+
+        @include tablet {
+            margin: auto;
+            width: 80%;
+        }
+
+        @include desktop {
+            width: fit-content;
+            margin: 0;
+        }
     }
 
     @include desktop {
-        flex-direction: row-reverse;
-        gap: 5em;
+        flex-direction: row-reverse; //Pour mettre le logo après les liens
+        gap: 4em;
         padding-right: 5em;
+        align-items: center;
     }
 }
 
@@ -31,11 +43,21 @@
         .fa-utensils {
             padding: 0 4px;
         }
+
+        @include tablet {
+            margin: auto;
+            width: 80%;
+        }
+
+        @include desktop {
+            white-space: nowrap;
+            width: 100%;
+            margin: 0;
+        }
     }
 
     @include desktop {
         flex-direction: row;
-        gap: 4vw;
-        white-space: nowrap;
+        gap: 3em;
     }
 }

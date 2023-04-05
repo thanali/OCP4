@@ -8,6 +8,7 @@
     max-height: 400px;
 }
 
+
 // Fiche menu
 
 .menu-main {
@@ -15,7 +16,7 @@
     background-color: $color-background;
     border-radius: $radius * 2 $radius * 2 0 0;
     position: relative;
-    margin-top: -60px;
+    margin-top: -60px; //pour faire remonter menu sur l'image
 
     @include tablet {
         width: 70%;
@@ -23,6 +24,9 @@
         padding: 30px 12%;
     }
 }
+
+
+//Titre et favori
 
 .title {
     display: flex;
@@ -44,6 +48,9 @@
         gap: 2em;
     }
 }
+
+
+//Section des plats
 
 .courses {
     padding: 25px 0;
@@ -70,6 +77,9 @@
     }
 }
 
+
+//Composition des sections
+
 .coursesItem {
     display: flex;
     background-color: #ffffff;
@@ -77,7 +87,7 @@
     box-shadow: $box-shadow;
     white-space: nowrap;
     overflow: hidden;
-    animation: btt $anim-dur 200ms backwards cubic-bezier(.37,.6,.7,1.16);
+    animation: btt $anim-dur 200ms backwards cubic-bezier(.37,.6,.7,1.16); //ease-in-out 
 
     &__info {
         display: flex;
@@ -114,11 +124,16 @@
         }
     }
 
+
+    //Boucle pour décalage d'apparation des plats
+
     @for $i from 1 through $article-courses {
         &--#{$i} {
             animation-delay: $anim-delay * $i;
         }
     }
+
+    //Animation au survol des plats
 
     &:hover .coursesItem--validation {
         width: 60px;
@@ -129,6 +144,8 @@
     }
 }
 
+
+//Éléments de départ des animations
 
 .coursesItem--validation {
     background-color: $color-tertiary;

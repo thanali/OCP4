@@ -16,6 +16,8 @@ header {
         left: 22px;
         cursor: pointer;
 
+        //Flèche animée sur les pages menus
+        
         &:hover{
             content: '\f060';
             animation: shake 700ms ease-in 100ms infinite;

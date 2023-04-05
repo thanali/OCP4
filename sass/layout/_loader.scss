@@ -1,15 +1,15 @@
 .loader {
     font-family: 'Shrikhand', sans-serif;
     font-size: 9vw;
-    width: 100vw;
-    height: 100vh;
+    width: 100vw; // largeur totale de l'écran
+    height: 100vh; //hauteur totale de l'écran
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     background: radial-gradient(circle at 40%, $color-background 40%, $color-secondary 10%, $color-primary 100%);
     ;
-    z-index: 999;
+    z-index: 999; //pour qu'il se place au-dessus de tous les éléments de la page d'accueil
     animation: fadeout 3000ms linear forwards;
 }
 
@@ -30,7 +30,7 @@
         background-color: $color-primary;
         border-radius: 50%;
         color: $color-primary;
-        animation: bounce 1500ms 300ms both;
+        animation: bounce 1500ms 300ms both; //both pour que la balle reste sur la position initiale de l'animation au début et finale à la fin
         z-index: 5;
     }
 
@@ -38,13 +38,15 @@
         display: flex;
         width: 50vw;
         color: $color-primary;
-        filter: drop-shadow(-0.4vw 0.4vw 0.1vw #F6F6F6);
+        filter: drop-shadow(-0.4vw 0.4vw 0.1vw #F6F6F6); //effet d'ombre pour svg
         bottom: 0;
         z-index: 1;
     }
 
+    //Écrasement des lettres par rapport à la balle
+
     .letter1 {
-        transform-origin: bottom;
+        transform-origin: bottom; //déplacement de l'origine du repère pour qu'elle s'écrase vers le bas - défaut au centre
         animation: squeeze 500ms ease-in-out 450ms backwards;
         z-index: 2;
     }

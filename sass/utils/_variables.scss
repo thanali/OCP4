@@ -1,3 +1,6 @@
+
+//Couleur
+
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99E2D0;
@@ -5,14 +8,25 @@ $color-background: #F6F6F6;
 $color-searchbar: #EAEAEA;
 $gradient: 350deg, $color-primary -5%, $color-secondary 115%;
 $box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+//Taille éléments
+
 $radius: 25px;
 $icone-size: 1.2em;
 $fontsize-title: 1.5em;
 $gap-mobile: 1.5em;
-$gap-tablette: 2em;
+$width-tablet: 80%;
+
+//Éléments
+
 $article-courses: 10;
+
+//Animation
+
 $anim-dur: 1000ms;
 $anim-delay: calc($anim-dur / $article-courses);
+
+//Média queries
 
 $breakpoints: (
     tablet: 745px,
