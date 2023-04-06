@@ -1,5 +1,4 @@
 .loader {
-    font-size: 9vw;
     width: 100vw; // largeur totale de l'écran
     height: 100vh; //hauteur totale de l'écran
     display: flex;
@@ -9,7 +8,7 @@
     background: radial-gradient(circle at 40%, $color-background 40%, $color-secondary 10%, $color-primary 100%);
     ;
     z-index: 999; //pour qu'il se place au-dessus de tous les éléments de la page d'accueil
-    animation: fadeout 3000ms linear forwards;
+    // animation: fadeout 3000ms linear forwards;
 }
 
 .anim {

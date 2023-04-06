@@ -131,7 +131,6 @@ a {
 }
 
 .loader {
-  font-size: 9vw;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -140,7 +139,6 @@ a {
   position: absolute;
   background: radial-gradient(circle at 40%, #F6F6F6 40%, #ff79da 10%, #9356dc 100%);
   z-index: 999;
-  animation: fadeout 3000ms linear forwards;
 }
 
 .anim {
