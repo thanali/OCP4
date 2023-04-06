@@ -29,9 +29,9 @@
     }
 }
 
-// Apparition au survol pour le choix des plats
+// Animation à la sélection checkbox
 
-@keyframes check-hover {
+@keyframes check {
     0%, 100%{
         transform: scale(1);
     }

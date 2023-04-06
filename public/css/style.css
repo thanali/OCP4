@@ -19,7 +19,7 @@
     transform: scaleX(1);
   }
 }
-@keyframes check-hover {
+@keyframes check {
   0%, 100% {
     transform: scale(1);
   }
@@ -131,7 +131,6 @@ a {
 }
 
 .loader {
-  font-family: "Shrikhand", sans-serif;
   font-size: 9vw;
   width: 100vw;
   height: 100vh;
@@ -455,7 +454,7 @@ header .icon-return:hover {
   width: 60px;
 }
 .selectItem input:checked + .coursesItem--validation .fa-circle-check {
-  animation: check-hover 700ms 200ms;
+  animation: check 700ms 200ms;
 }
 
 .button {
