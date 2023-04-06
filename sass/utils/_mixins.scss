@@ -4,6 +4,7 @@
 @mixin btn {
 
     //Condition sur la couleur du texte en fonction de la couleur de fond
+    
     @if (lightness($color-primary) > 60%) {
         color: black;
     }@else{
@@ -62,6 +63,46 @@
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: initial;
         animation: fill 600ms 100ms backwards;
+    }
+}
+
+
+//Pour sélection des plats
+
+@mixin selectItem {
+
+        //Retire checkbox
+
+    input {
+        display: none;
+    }
+
+    // Mise en place du bloc de départ et icone
+
+    .coursesItem--validation {
+        height: 100%;
+        background-color: $color-tertiary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 0;
+        transition: 300ms ease-in-out;
+        
+        .fa-circle-check {
+            color: #ffffff;
+            font-size: 1.3em;
+        }
+    }
+
+    //Réaction du bloc et icone au clic utilisateur
+
+    input:checked + .coursesItem--validation {
+        width: 60px;
+
+        .fa-circle-check {
+            animation: check-hover 700ms 200ms;
+        }
     }
 }
 

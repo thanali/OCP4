@@ -40,12 +40,19 @@
     }
 
     .favorite-menu {
+        width: 2em;
         @include favorite;
     }
 
     @include tablet {
         justify-content: center;
         gap: 2em;
+
+        .favorite-menu {
+            position: relative;
+            right: initial;
+            margin-right: initial;
+        }
     }
 }
 
@@ -133,33 +140,16 @@
         }
     }
 
+
     //Animation au survol des plats
 
     &:hover .coursesItem--validation {
         width: 60px;
     }
-
-    &:hover .fa-circle-check {
-        animation: check-hover 700ms 200ms;
-    }
 }
 
-
-//Éléments de départ des animations
-
-.coursesItem--validation {
-    background-color: $color-tertiary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    width: 0;
-    transition: 300ms ease-in-out;
-    
-    .fa-circle-check {
-        color: #ffffff;
-        font-size: 1.3em;
-    }
+.selectItem {
+    @include selectItem;
 }
 
 
