@@ -30,7 +30,7 @@
         background-color: $color-primary;
         border-radius: 50%;
         color: $color-primary;
-        animation: bounce 1500ms 300ms both; //both pour que la balle reste sur la position initiale de l'animation au début et finale à la fin
+        animation: bounce 1500ms 500ms both; //both pour que la balle reste sur la position initiale de l'animation au début et finale à la fin
         z-index: 5;
     }
 
@@ -47,13 +47,13 @@
 
     .letter1 {
         transform-origin: bottom; //déplacement de l'origine du repère pour qu'elle s'écrase vers le bas - défaut au centre
-        animation: squeeze 500ms ease-in-out 450ms backwards;
+        animation: squeeze 500ms ease-in-out 650ms backwards;
         z-index: 2;
     }
 
     .letter7 {
         transform-origin: bottom;
-        animation: squeeze 500ms ease-in-out 1350ms backwards;
+        animation: squeeze 500ms ease-in-out 1550ms backwards;
         z-index: 2;
     }
 }

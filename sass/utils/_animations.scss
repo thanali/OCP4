@@ -100,7 +100,7 @@
         bottom: 80%;
     }
 
-    15% {
+    5% {
         opacity: 1;
     }
 
@@ -108,7 +108,7 @@
         left: 0;
         bottom: 2.5vw;
         transform: rotateX(60deg);
-        animation-timing-function: cubic-bezier(.35,.66,.7,.99);
+        animation-timing-function: cubic-bezier(.34,.61,.65,1); //ease-out
     }
 
     30% {
@@ -117,7 +117,7 @@
 
     50% {
         bottom: 70%;
-        animation-timing-function: cubic-bezier(.27,.18,.7,.99);
+        animation-timing-function: cubic-bezier(.27,.18,.7,.99); //ease-in-out
     }
 
     65% {
@@ -125,13 +125,16 @@
     }
 
     80% {
-        opacity: 1;
         left: 75%;
         bottom: 2.5vw;
         transform: rotateX(60deg);
-        animation-timing-function: cubic-bezier(.35,.66,.7,.99);
+        animation-timing-function: cubic-bezier(.34,.61,.65,1); //ease-out
     }
 
+    85% {
+
+        opacity: 1;
+    }
     100% {
         left: 60vw;
         opacity: 0;

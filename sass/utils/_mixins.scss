@@ -33,23 +33,29 @@
 
 @mixin favorite {
 
+    //Icone de départ
+
     .icon-toggle {
-        position: relative;
-        font-size: 1.5em;
+        position: absolute;
+        font-size: 1.7em;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: thin;
-        overflow: hidden;
+        overflow: visible; //Coeur en entier sans coupures sur les côtés
         cursor: pointer;
     }
-    
-    input{  
-        display: none;   //Retire la checkbox
+
+    //Retire la checkbox
+
+    input{
+        display: none;
     }
     
+    //Icone quand click sur favori
+
     input:checked + .icon-toggle i::after {
         content: '\f004';
-        position: absolute;
-        left: 0;
+        position: absolute; 
+        left: 0;  //se superpose sur l'icone de départ
         background: -webkit-linear-gradient($gradient);
         -webkit-background-clip: text;
         background-clip: text;

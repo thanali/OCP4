@@ -87,7 +87,7 @@
     box-shadow: $box-shadow;
     white-space: nowrap;
     overflow: hidden;
-    animation: btt $anim-dur 200ms backwards cubic-bezier(.37,.6,.7,1.16); //ease-in-out 
+    animation: btt $anim-dur 200ms backwards cubic-bezier(.35,.6,.7,1); //ease-in-out 
 
     &__info {
         display: flex;
