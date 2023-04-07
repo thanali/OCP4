@@ -131,12 +131,12 @@ a {
 }
 
 .loader {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   background: radial-gradient(circle at 40%, #F6F6F6 40%, #ff79da 10%, #9356dc 100%);
   z-index: 999;
   animation: fadeout 3000ms linear forwards;
